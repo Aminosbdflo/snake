@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Admin</h2>
+    <a href="/">Home</a>
+    <a href="#" id="logout-btn">Logout</a>
+  </div>
+  <div class="main">
+    <h1>Dashboard</h1>
+    <div class="stats">
+      <div class="stat-card"><h3>Total Products</h3><p id="stat-products">0</p></div>
+    </div>
+    
+    <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+      <input type="text" id="admin-search" placeholder="Search..." style="padding:0.5rem;">
+      <button id="add-btn" style="padding:0.5rem 1rem;">Add Product</button>
+    </div>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="admin-products"></tbody>
+    </table>
+  </div>
+
+  <div id="modal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" id="close-modal">&times;</span>
+      <h2 id="modal-title">Add Product</h2>
+      <form id="product-form" style="box-shadow:none; padding:0; margin:0;">
+        <input type="hidden" id="prod-id">
+        <div><label>Name</label><input type="text" id="prod-name" required></div>
+        <div><label>Description</label><input type="text" id="prod-desc"></div>
+        <div><label>Price</label><input type="number" step="0.01" id="prod-price" required></div>
+        <div><label>Stock</label><input type="number" id="prod-stock" required></div>
+        <div><label>Category</label><input type="text" id="prod-cat"></div>
+        <div><label>Image URL</label><input type="text" id="prod-img"></div>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>

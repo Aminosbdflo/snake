@@ -1,0 +1,14 @@
+body { display: flex; margin: 0; font-family: Arial, sans-serif; background: #f4f4f9; }
+.sidebar { width: 250px; background: #333; color: #fff; min-height: 100vh; padding: 1rem; }
+.sidebar a { display: block; color: #fff; text-decoration: none; margin-bottom: 1rem; }
+.main { flex: 1; padding: 2rem; }
+.stats { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.stat-card { background: #fff; padding: 1.5rem; flex: 1; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #f8f9fa; }
+.actions button { padding: 0.25rem 0.5rem; margin-right: 0.5rem; cursor: pointer; }
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; }
+.modal-content { background: #fff; padding: 2rem; border-radius: 8px; width: 400px; max-width: 90%; }
+.close { float: right; cursor: pointer; font-size: 1.2rem; }
+.toast { position: fixed; bottom: 20px; right: 20px; background: #333; color: #fff; padding: 1rem; border-radius: 4px; display: none; }

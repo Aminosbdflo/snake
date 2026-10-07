@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Register</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .form-container { display: flex; gap: 2rem; max-width: 800px; margin: 2rem auto; }
+    .form-box { flex: 1; background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .form-box h2 { margin-bottom: 1rem; }
+    @media (max-width: 600px) { .form-container { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MySite</div>
+    <div><a href="/">Home</a></div>
+  </nav>
+  
+  <div class="form-container">
+    <div class="form-box">
+      <form id="login-form" style="box-shadow:none; padding:0; margin:0; max-width:none;">
+        <h2>Login</h2>
+        <div>
+          <label>Email</label>
+          <input type="email" id="email" required>
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="password" id="password" required>
+        </div>
+        <button type="submit">Login</button>
+        <div id="login-error" class="error"></div>
+      </form>
+    </div>
+
+    <div class="form-box">
+      <form id="register-form" style="box-shadow:none; padding:0; margin:0; max-width:none;">
+        <h2>Create an Account</h2>
+        <div>
+          <label>Name</label>
+          <input type="text" id="reg-name" required>
+        </div>
+        <div>
+          <label>Email</label>
+          <input type="email" id="reg-email" required>
+        </div>
+        <div>
+          <label>Password</label>
+          <input type="password" id="reg-password" required>
+        </div>
+        <button type="submit" style="background:#007bff;">Register</button>
+        <div id="reg-error" class="error"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/login.js"></script>
+</body>
+</html>

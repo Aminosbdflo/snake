@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Home</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <div class="logo">MySite</div>
+    <div>
+      <a href="/">Home</a>
+      <a href="/login.html" id="login-link">Login</a>
+      <a href="#" id="logout-link" class="hidden">Logout</a>
+      <a href="/admin.html" id="admin-link" class="hidden">Dashboard</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Welcome to MySite</h1>
+    <p>Discover the best products at unbeatable prices.</p>
+    <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
+  </div>
+
+  <div class="container">
+    <div class="filters">
+      <input type="text" id="search" placeholder="Search products...">
+      <select id="category">
+        <option value="">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Furniture">Furniture</option>
+      </select>
+    </div>
+    <div class="products" id="products"></div>
+  </div>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
