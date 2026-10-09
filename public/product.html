@@ -3,19 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details</title>
+  <title>LUXE — Product</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+  <!-- ── Navigation ── -->
   <nav>
-    <div class="logo">MySite</div>
+    <div class="logo">Luxe</div>
     <div>
-      <a href="/">Home</a>
+      <a href="/">Collection</a>
+      <a href="/login.html" id="login-link">Account</a>
+      <a href="#" id="logout-link" class="hidden">Sign Out</a>
     </div>
   </nav>
-  <div class="container" id="product-details">
-    <p>Loading...</p>
+
+  <!-- ── Breadcrumb ── -->
+  <div style="padding: 1.5rem 4rem; border-bottom: 1px solid var(--dark-4);">
+    <span style="font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--text-muted);">
+      <a href="/" style="color:var(--text-muted);">Collection</a>
+      &nbsp;/&nbsp;
+      <span id="breadcrumb-name" style="color:var(--gold);">Product</span>
+    </span>
   </div>
+
+  <!-- ── Product Detail ── -->
+  <div id="product-details">
+    <!-- JS-rendered -->
+    <div style="text-align:center; padding:6rem 2rem;">
+      <p style="font-size:0.7rem; letter-spacing:0.3em; color:var(--text-muted);">Loading…</p>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-logo">Luxe</div>
+    <p>&copy; 2026 Luxe. All rights reserved.</p>
+  </footer>
+
   <script src="/js/product.js"></script>
 </body>
 </html>

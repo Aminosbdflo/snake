@@ -3,39 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - Home</title>
+  <title>LUXE — Refined Luxury</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
+  <!-- ── Navigation ── -->
   <nav>
-    <div class="logo">MySite</div>
+    <div class="logo">Luxe</div>
     <div>
-      <a href="/">Home</a>
-      <a href="/login.html" id="login-link">Login</a>
-      <a href="#" id="logout-link" class="hidden">Logout</a>
-      <a href="/admin.html" id="admin-link" class="hidden">Dashboard</a>
+      <a href="/">Collection</a>
+      <a href="/login.html" id="login-link">Account</a>
+      <a href="#" id="logout-link" class="hidden">Sign Out</a>
+      <a href="/admin.html" id="admin-link" class="hidden" style="color:var(--gold);">Dashboard</a>
     </div>
   </nav>
 
-  <div class="hero">
-    <h1>Welcome to MySite</h1>
-    <p>Discover the best products at unbeatable prices.</p>
-    <button onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
-  </div>
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <span class="hero-eyebrow">New Season Arrival</span>
+    <h1>The Art of<br><em>Refinement</em></h1>
+    <div class="hero-divider"></div>
+    <p>Discover our curated collection of exceptional pieces, crafted for those who demand nothing but the finest.</p>
+    <button class="btn-primary" onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">
+      <span>Explore Collection</span>
+    </button>
+  </section>
 
-  <div class="container">
-    <div class="filters">
-      <input type="text" id="search" placeholder="Search products...">
-      <select id="category">
-        <option value="">All Categories</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Accessories">Accessories</option>
-        <option value="Furniture">Furniture</option>
-      </select>
+  <!-- ── Collection ── -->
+  <section class="section" id="collection">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Our Selection</p>
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="filters reveal">
+        <input type="text" id="search" placeholder="Search collection…" autocomplete="off">
+        <select id="category">
+          <option value="">All Categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Furniture">Furniture</option>
+        </select>
+      </div>
+
+      <div class="products" id="products"></div>
     </div>
-    <div class="products" id="products"></div>
-  </div>
+  </section>
 
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-logo">Luxe</div>
+    <p>&copy; 2026 Luxe. All rights reserved. &nbsp;·&nbsp; Crafted with precision.</p>
+  </footer>
+
+  <div id="toast"></div>
   <script src="/js/main.js"></script>
 </body>
 </html>
